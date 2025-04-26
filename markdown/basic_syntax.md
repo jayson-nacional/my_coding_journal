@@ -58,9 +58,42 @@ Headers start with number sign(#). Header number is determined by the number of 
 > Sample: ``Use `code` in your Markdown file.``
 >
 > Sample codeblock inside a blockquote  
-``
-        <html>  
-            <head>  
-            </head>  
-        </html>  
-``
+```
+    <html>  
+        <head>  
+        </head>  
+    </html>  
+```  
+
+
+# Horizontal Rules  
+
+> Use three(3) or more asterisks(\*), dashes(-) or undersores(_)
+>
+> -------
+>
+> Always add a blank line before and after the horizontal rule.  
+
+
+# Links  
+
+> To create links enclose the text in brackets (i.e. [test link]) and put the url inside a parenthesis.  
+>
+> To add a title, put the title after the url, enclosed in double quotes. Will appear as popup when hovered.    
+>
+> Sample [github](https://github.com/jayson-nacional/my_coding_journal/blob/main/markdown/basic_syntax.md "Basic syntax")
+>
+> To make a URL or email address into a link, enclose it in angle brackets. (\<\>)
+>
+> Formatting links -> just simply add the correct formatting symbol before and after the link block/element.  
+>
+> **TODO**: learn about reference-style links, link best practices  
+
+
+# Images  
+
+> Add ! followed by the alt text in brackers and parenthesis to enclose the image url and title  
+>
+> To link an image, enclose the image block inside the first bracket block of the link
+
+
