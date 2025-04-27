@@ -53,17 +53,17 @@ Headers start with number sign(#). Header number is determined by the number of 
 
 # Code Blocks  
 
-> To create code blocks, enclose the text in backticks(')
+> To create code blocks, enclose the text in backticks(`)
 >
-> Sample: ``Use `code` in your Markdown file.``
+> ``Use `code` in your Markdown file.``
 >
 > Sample codeblock inside a blockquote  
-```
-    <html>  
-        <head>  
-        </head>  
-    </html>  
-```  
+> ```
+> <html>  
+>      <head>  
+>      </head>  
+> </html>  
+> ```
 
 
 # Horizontal Rules  
