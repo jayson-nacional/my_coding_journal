@@ -12,22 +12,20 @@
 - callable
 - resource  
 
----
-
-**Type-juggling**  
+## Type-juggling  
 
 : as php is dynamically typed, the interpreter automatically converts the value into a type that supports the operation  
 
 To get the type and value of an expression use the `var_dump()` function, use `get_debug_type()` just to get the type.
 
 
-# Atomic Types  
+## Atomic Types  
 
 Built-in types and integrated with the language, cannot be recreated.  
 
----
 
-**Built-in Types**  
+## Built-in Types  
+
 - Scalar types: 
     - bool
     - int
@@ -45,46 +43,42 @@ Built-in types and integrated with the language, cannot be recreated.
 - Unit types
     - null  
 
----
 
-**User-defined Types**  
+## User-defined Types  
+
 - Interfaces
 - Classes
 - Enumerations
 
----
 
-**Callable type**  
+## Callable type  
 
 : are usually functions  
 
 
-# Composite Types  
+## Composite Types  
 
 Combination of multiple atomic types  
 
----
 
-**Intersection Types**  
+## Intersection Types  
 
 : satisfies multiple type declarations. Joined by ampsersand symbol(&). Intersection of Type T,U, and V is expressed as `T&U&V`  
 
----
 
-**Union Types**  
+## Union Types  
 
 : accepts multiple type declarations. Joined by the pipe(|) symbol. Union of Type T,U, and V is expressed as `T|U|V`  
 
----
 
-**Type Aliases**
+## Type Aliases
 
 : mixed => object|resource|array|string|float|int|bool  
 
 : iterable => Traversible|array  
 
 
-# NULL  
+## NULL  
 
 Unit type as it has only one value (null/NULL - case insensitive)  
 
@@ -93,12 +87,13 @@ Unit type as it has only one value (null/NULL - case insensitive)
 Use `is_null()` to check if an expression results to null  
 
 
-# Booleans  
+## Booleans  
 
 Has two values - true or false (case-insensitive)  
 
 When a value is used in a control structure, it is automatically juggled to its boolean equivalent, casting is not needed.  
-**Values which are converted false**  
+### Values which are converted false  
+
 - boolean `default` is false
 - integer 0
 - floats 0.0 and -0.0

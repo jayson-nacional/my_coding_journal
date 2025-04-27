@@ -16,9 +16,7 @@ Ints doesn't support unsigned values. Ints can be specified in decimal(base 10),
 ?>
 ```  
 
----
-
-**Integer Overflow**  
+## Integer Overflow  
 
 Integer size is platform independent. Size, Min and Max values are identified using PHP_INT_SIZE, PHP_INT_MAX, PHP_INT_MIN  
 If PHP encounters an int beyond the bounds of int type, it is automatically interpreted as float type. Operations that results in number beyond bounds of int are returned as float.  
@@ -29,15 +27,13 @@ If PHP encounters an int beyond the bounds of int type, it is automatically inte
 ?>
 ```  
 
----
+## Integer Division  
 
-**Integer Division**
 - Casting (int) to a float will round the value to zero
 - Use `round()` function to have finer control over rounding
 
----
+## Converting to Integer  
 
-**Converting to Integer**
 - If (int) is casted on a `resource` value then it will return the unique resource number during PHP runtime
 - Boolean false will be converted to 0 and true to 1
 - When casting (int) to a float, the value will be rounded towards zero

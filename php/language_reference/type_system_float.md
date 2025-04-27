@@ -40,4 +40,4 @@ Due to precision limitations of float, comparison between two floating point num
 
 ## NAN  
 
-Cannot be compared to other values including itself, sould be checked with `is_nan()`
+Cannot be compared to other values including itself, should be checked with `is_nan()`
