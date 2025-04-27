@@ -82,3 +82,29 @@ Combination of multiple atomic types
 : mixed => object|resource|array|string|float|int|bool  
 
 : iterable => Traversible|array  
+
+
+# NULL  
+
+Unit type as it has only one value (null/NULL - case insensitive)  
+
+`undefined` and result of `unset()` is null  
+
+Use `is_null()` to check if an expression results to null  
+
+
+# Booleans  
+
+Has two values - true or false (case-insensitive)  
+
+When a value is used in a control structure, it is automatically juggled to its boolean equivalent, casting is not needed.  
+**Values which are converted false**  
+- boolean `default` is false
+- integer 0
+- floats 0.0 and -0.0
+- empty string "" and string "0"
+- array with zero elements ([])
+- NULL
+- TODO: Analyze => Internal objects that overload their casting behaviour to bool. For example: SimpleXML objects created from empty elements without attributes.  
+
+*Every other value is considered true - including `resource` and `NAN`*
