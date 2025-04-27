@@ -36,7 +36,7 @@ Everything outside the php tags are not executed so this can make embedding in h
 <p>This is another paragraph after php output</p>
 ```
 
-*Advanced escaping using php conditions*  
+**Advanced escaping using php conditions**  
 
 ---  
 
@@ -78,6 +78,3 @@ Please see another sample below.
 \# => one-line comment in shell-style
 
 /* ... */ => multi-line comment
-
-
-
