@@ -14,16 +14,14 @@ Also known as "floats", "doubles", or "real numbers"
 
 Never trusts floating point numbers to the last digit due to floats limited precision. Do not compare equality betweeen floats.
 
----
 
-**Converting to float**  
+## Converting to float  
 
 - From strings, if the string/start of the string is numerical then it is converted to it's numerical counterpart, otherwise it is converted to 0
 - For converting from other types, the value is initially converted to int, then from int it is converted to float.  
 
----
 
-**Comparing floats**  
+## Comparing floats  
 
 Due to precision limitations of float, comparison between two floating point numbers is managed using a machine epsilon or unit roundoff, using the smallest acceptable difference
 
@@ -40,8 +38,6 @@ Due to precision limitations of float, comparison between two floating point num
 ?>
 ```  
 
----
-
-**NAN**  
+## NAN  
 
 Cannot be compared to other values including itself, sould be checked with `is_nan()`
