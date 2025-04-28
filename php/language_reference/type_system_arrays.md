@@ -1,7 +1,7 @@
 
 # Arrays  
 
-Arrays in PHP is an ordered map(type that associates values to keys). This can be optimized for differen uses:  
+Arrays in PHP is an ordered map(type that associates values to keys). This can be optimized for different uses:  
 - can be treated as an array
 - list(vector)
 - hash table(an implementation of map)
@@ -13,7 +13,7 @@ Arrays in PHP is an ordered map(type that associates values to keys). This can b
 
 ## Syntax  
 
-Can be created using the `array()` language construct. It takes any number of of comma-separated key => value pairs as arguments.  
+Can be created using the `array()` language construct. It takes any number of comma-separated key => value pairs as arguments.  
 
 ```
 array(
@@ -40,7 +40,7 @@ array(
 ?>
 ```
 
-The key can only be either an int or a string. The value can be of any type.  
+The key can only be either an `int` or a `string`. The value can be of any type.  
 
 
 As indexes can only be either a string or an int, use of keys which are of different type are automatically converted to int equivalent causing overwrites. See sample below:  
@@ -111,7 +111,7 @@ More samples:
 
 ## Array Behaviors  
 - To remove a key/value pair inside an array, `unset()` method can be used
-- When using the syntax `$array[] = value`, the index is automatically set to the largest existing index + 1
+- When using the syntax `$array[] = value`, the index is automatically set to the largest existing `index + 1`
 - Note that when using unset for the array elements, the value of indexes is retained. To reset the index back to 0 as the starting point use the `array_values($array)` function.  
 
 
@@ -128,7 +128,8 @@ More samples:
 ?>
 ```  
 
-## Ignoring Elements on Desctructure  
+## Ignoring Elements on Destructure  
+
 ```php
 <?php
     $source_array = ["foo", "bar", "baz"];

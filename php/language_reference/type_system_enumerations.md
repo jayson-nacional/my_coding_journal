@@ -19,4 +19,4 @@ Restricting layer on top of classes and constants, intended to provide a way to 
 ?>
 ```
 
-When casting an object to an enum, value is retained. If array is casted, an array with single element with name key and enum value as the pair is generated.
+When casting an object to an enum, value is retained. If array is casted, an array with single element with `name` key and enum value as the pair is generated.
