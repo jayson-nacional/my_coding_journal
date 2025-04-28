@@ -106,4 +106,89 @@ More samples:
 ?>
 ```
 
+*Note*: Adding value to an array using the syntax `$arr[] = value` will result to adding an element to the last index of an array.  
+
+
+## Array Behaviors  
+- To remove a key/value pair inside an array, `unset()` method can be used
+- When using the syntax `$array[] = value`, the index is automatically set to the largest existing index + 1
+- Note that when using unset for the array elements, the value of indexes is retained. To reset the index back to 0 as the starting point use the `array_values($array)` function.  
+
+
+## Array Destructuring  
+```php
+<?php
+    $source_array = ["foo", "bar", "baz"];
     
+    [$foo, $bar, $baz] = $source_array;
+
+    echo $foo, PHP_EOL;     // prints "foo"
+    echo $bar, PHP_EOL;     // prints "bar"
+    echo $baz, PHP_EOL;     // prints "baz"
+?>
+```  
+
+## Ignoring Elements on Desctructure  
+```php
+<?php
+    $source_array = ["foo", "bar", "baz"];
+    
+    [, , $baz] = $source_array;
+
+    echo $baz, PHP_EOL;     // prints "baz"
+?>
+```
+
+## Destructuring Associative Arrays  
+```php
+<?php
+    $source_array = ["foo" => 1, "bar" => 2, "baz" => 3];
+
+    ["baz" => $three] = $source_array;
+    echo $three, PHP_EOL; // prints 3
+
+    $source_array = ["foo", "bar", "baz"];
+
+    [2 => $baz] = $source_array;
+    echo $baz, PHP_EOL; // prints "baz"
+?>
+```  
+
+## Using Destructuring technique to swap variable values  
+```php
+<?php
+    $a = 1;
+    $b = 2;
+
+    [$a, $b] = [$b, $a];
+
+    echo $a, PHP_EOL; // prints 2
+    echo $b, PHP_EOL; // prints 1
+?>
+```  
+
+*Note*: Always use qouted strings to access array index, otherwise it may be interpreted as a constant
+
+
+## Converting to Array  
+
+For any type of int, float, string, bool, and resource, converting a value to an array results in an array with a single element with index zero and the value of the scalar which was converted.
+
+**Comparing Arrays** - possible with `array_diff()` function
+
+**Array unpacking** - `[...$array]` (spread operator) => follows `array_merge()` behavior where later string keys overwrites earlier ones and integer keys are renumbered
+
+
+## Changing element in the loop
+
+```php
+<?php
+    $colors = array("red", "blue", "green", "yellow");
+
+    foreach ($colors as &$color) {
+        $color = mb_strtoupper($color);
+    }
+
+    unset($color); // ensures that following writes to $color will not overwrite the last array element
+?>
+```
