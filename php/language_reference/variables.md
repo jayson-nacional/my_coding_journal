@@ -53,4 +53,33 @@ If access to argument from parent function is required use the `use` keyword to 
 ?>
 ```
 
+Static variables inside inherited methods (not overridden) behave like static properties. 
+```php
+<?php
+    class ParentClass {
+        public static function static_function() {
+            static $a = 0;
+            $a++;
+            return $a;
+        }
+    }
 
+    class ChildClass extends ParentClass {}
+
+    var_dump(ChildClass::static_function()); // int(1)
+    var_dump(ChildClass::static_function()); // int(2)
+    var_dump(ChildClass::static_function()); // int(3)
+    var_dump(ChildClass::static_function()); // int(4)
+?>
+```
+
+TODO: Further analysis on references with static and global variables  
+
+## Variable variables  
+
+Variable names can be expressed dynamically using a variable variable. TODO: Requires further analysis on actual/practical usage
+
+
+## Variables from external sources  
+
+Predefined variables such as `$_POST`, `$_REQUEST`
