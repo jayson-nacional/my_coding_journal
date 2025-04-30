@@ -1,0 +1,3 @@
+- how does type juggling works (order of conversion)
+- how does spaceship operator works
+- short ternary operator
