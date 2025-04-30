@@ -127,3 +127,40 @@ PHP uses backticks (``) to denote shell operation. Output can be saved to a vari
     echo "<pre>$output</pre>";
 ?>
 ```
+
+## Logical Operators  
+
+|   Example |   Name    |   Result  |
+|   --- |   --- |   --- |
+| $a and $b | And | true if both $a and $b are true |
+| $a or $b | Or | true if either $a or $b are true |
+| $a xor $b | Xor | true if either $a or $b are true, but not both |
+| !$a | Not | true if $a is not true |
+| $a && $b | And | true if both $a and $b are true |
+| $a \|\| $b | Or | true if either $a or $b are true |
+
+*Note:* || has greater precedence than `or`  
+
+
+## String Operators  
+
+Use dot(.) for concatenation. Another option is the concatenating assignment operator(.=)  
+
+
+## Array Operators  
+
+| Example | Name | Result |
+| --- | --- | --- |
+| $a + $b | Union | Union of $a and $b |
+| $a == $b | Equality | true if $a and $b have the same key/value pairs |
+| $a === $b | Identity | true if $a and $b have the same key/value pairs in the same order and of the same types |
+| $a != $b | Inequality | true if $a is not equal to $b |
+| $a <> $b | Inequality | true if $a is not equal to $b |
+| $a !== $b | Non-identity | true if $a is not identical to $b |  
+
+
+## Type Operators  
+
+`instanceof` is used to determine whether a variable is an instantiated object of certain class. This can also be used to determine whether a variable is an instantiated object of a class that inherits from a parent class. Lastly, it can also be used to determine whether a variable is an instantiated object of a class that impelements an interface.  
+
+
