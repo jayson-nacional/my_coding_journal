@@ -20,14 +20,17 @@ TODO: Learn more about the order or precedence of operators and its practical us
 
 ## Arithmetic  
 
-+$a | Identity Operator | Conversion of $a to `int` or `float` as appropriate  
--$a | Negation  | Opposite of $a
-$a + $b | Addition  | Sum of $a and $b
-$a - $b | Subtraction | Difference of $a and $b
-$a * $b | Multiplication    | Product of $a and $b
-$a / $b | Division  | Quotient of $a and $b
-$a % $b | Modulo    | Remainder of $a divided by $b
-$a ** $b    | Exponentiation    | Result of $a raising to the $b'th power  
+
+| Operator | Name | Description |
+| --- | --- | --- |
+| +$a | Identity Operator | Conversion of $a to `int` or `float` as appropriate  |
+| -$a | Negation  | Opposite of $a|
+| $a + $b | Addition  | Sum of $a and $b|
+| $a - $b | Subtraction | Difference of $a and $b|
+| $a * $b | Multiplication    | Product of $a and $b|
+| $a / $b | Division  | Quotient of $a and $b|
+| $a % $b | Modulo    | Remainder of $a divided by $b|
+| $a ** $b    | Exponentiation    | Result of $a raising to the $b'th power  |
 
 For modulo operator, the sign of the the left hand value is used  
 
@@ -41,6 +44,8 @@ TODO: Learn about bitwise operators
 
 ## Comparison  
 
+| Operator  |   Name    |
+|   --- |   --- |
 |   $a == $b    |   Equal   |
 |   $a ==== $b  |   Identical   |
 |   $a != $b    |   Not Equal   |
