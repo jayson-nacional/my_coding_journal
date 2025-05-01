@@ -66,3 +66,14 @@ Classes can only inherit to one base class. Methods and properties of parent cla
 
 **Signature compatibility rules** - When overriding a method, its signature must be compatible with the parent method. A signature is compatible if it respects the `variance` rules, makes a mandatory parameter optional, adds only optional new parameters and doesn't restrict but only relaxes the visibility.
 
+Use the `::class` syntax to perform class name resolution. Very useful for mapping namespaces
+```php
+<?php
+    class MyClass {}
+    
+    echo MyClass::class, PHP_EOL;
+?>
+```
+
+TODO: Needs further research on **nullsafe** operator  
+
