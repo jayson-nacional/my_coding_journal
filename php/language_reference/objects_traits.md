@@ -97,3 +97,29 @@ Using the `as` syntax, metohd visibility can be changed
 ?>
 ```
 
+## Traits Composed from Traits  
+
+```php
+<?php
+    trait TraitA
+    {
+        public function foo() { }
+    }
+
+    trait TraitB
+    {
+        public function bar() { }
+    }
+    
+    trait TraitC
+    {
+        use TraitA, TraitB;
+    }
+?>
+```  
+
+*Note:* Traits support declaration of `abstract` methods  
+
+Traits also support static methods and properties  
+
+TODO: learn more about the use cases of traits
