@@ -96,5 +96,36 @@ Using position `?` parameter
 ```  
 
 The type of bounded parameter can also be defined using the syntax  
-`$stmt->bindParam(":param", $value, PDO::PARAM_STR)`
+`$stmt->bindParam(":param", $value, PDO::PARAM_STR)`  
+
+TODO: Learn more about PDO error handling  
+
+At some point, large data need to be stored on the database (i.e. 4kb or up). This can be resolved by binding the column as a lob. See sample below:  
+
+```php
+<?php
+    $stmt = $pdo->prepare("SELECT name, imagedata from test_table");
+    $stmt->execute();
+    $stmt->bindColumn(1, $name, PDO::PARAM_STR);
+    $stmt->bindColumn(2, $imageData, PDO::PARAM_LOB);
+
+    $stmt->fetch(PDO::FETCH_BOUND);
+    fpassthru($imageData);
+?>
+```  
+
+Inserting large data in database  
+
+```php
+<?php
+    $stmt = $pdo->prepare("INSERT INTO test_table(name, image_data) VALUES(?, ?)";
+    $stmt->bindParam(1, $name, PDO::PARAM_STR);
+    $stmt->bindParam(2, $image_data, PDO::PARAM_LOB);
+
+    $pdo->beginTransaction();
+    $stmt->execute();
+    $pdo->commit();
+?>
+```
+    
 
