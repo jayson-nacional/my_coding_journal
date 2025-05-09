@@ -128,4 +128,32 @@ Inserting large data in database
 ?>
 ```
     
+## Fetching up data  
+
+```php
+<?php
+    $stmt = $pdo->prepare("SELECT * FROM test_table");
+    $stmt->execute();
+
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    foreach ($result->fetchAll() as $key => $value) {
+        var_dump($value);
+    }
+?>
+```  
+
+TODO: Learn more about the different approaches to fetching data
+    
+Other option can be:  
+
+```php
+<?php
+    $stmt = $pdo->prepare("SELECT * FROM test_table");
+    $stmt->execute();
+
+    forach ($stmt as $row) {
+        var_dump($row);
+    }
+?>
+```
 
